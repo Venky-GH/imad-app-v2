@@ -18,7 +18,8 @@ var articles = {
 },
 'article-three': {
     title: 'Article Three',
-    content: `<p>This is Article three!</p><p>This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!
+    content: `<h1>This is Article three!</h1>
+    <p>This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!
         </p>
         <p>This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!
         </p>`,
@@ -42,8 +43,9 @@ var aap = `<html>
             <h1><a href="/">${home}</a></h1>
             <hr/>
         </div>
+        <div>
         ${content}
-        
+        </div>
     </body>
 </html>
 `;
