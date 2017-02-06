@@ -44,7 +44,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one',function (req,res){
-    res.send(articleOne); 
+    res.send(aa(articleOne)); 
 });
 
 app.get('/article-three',function (req,res){
