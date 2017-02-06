@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
+var articles = {
+'article-one': {
   title: 'Article One',
   content: `<p>This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!
         </p>
@@ -14,6 +15,16 @@ var articleOne = {
         <p>This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!
         </p>`,
    home: 'Home'
+},
+'article-three': {
+    title: 'Article Three',
+    content: `<p>This is Article three!</p><p>This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!
+        </p>
+        <p>This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!
+        </p>`,
+     home: 'Home'
+}
+
 };
 
 function aa(data){
@@ -43,17 +54,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function (req,res){
-    res.send(aa(articleOne)); 
+app.get('/:articleName',function (req,res){
+    var articleName = req.params.articleName;
+    res.send(aa(articles[articleName])); 
 });
 
-app.get('/article-three',function (req,res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-three.html')); 
-});
-
-app.get('/article-two',function (req,res){
-   res.send('Here is article two in your service!'); 
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
