@@ -16,6 +16,10 @@ var articleOne = {
    home: 'Home'
 };
 
+function aa(data){
+    var title = data.title;
+    var home = data.home;
+    var content = data.content;
 var aap = `<html>
     <head>
         <title>${title}</title>
@@ -32,13 +36,15 @@ var aap = `<html>
     </body>
 </html>
 `;
+return aap;
+}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one',function (req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-one.html')); 
+    res.send(articleOne); 
 });
 
 app.get('/article-three',function (req,res){
