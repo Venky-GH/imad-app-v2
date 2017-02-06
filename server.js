@@ -5,6 +5,34 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne = {
+  title: 'Article One',
+  content: `<p>This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!
+        </p>
+        <p>This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!
+        </p>
+        <p>This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!
+        </p>`,
+   home: 'Home'
+};
+
+var aap = `<html>
+    <head>
+        <title>${title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">${home}</a></h1>
+            <hr/>
+        </div>
+        ${content}
+        
+    </body>
+</html>
+`;
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
