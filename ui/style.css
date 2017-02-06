@@ -23,3 +23,11 @@ body {
 h1{
     text-decoration: underline;
 }
+.abc{
+    padding-top: 80px;
+    color: #808080;
+    font-family: times new roman;
+    margin: 0 auto;
+    max-width: 1000px;
+    background-color: #FFFFFF;
+}
