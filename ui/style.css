@@ -25,9 +25,10 @@ h1{
 }
 .abc{
     padding-top: 80px;
+    padding-left:20px;
+    padding-right:20px;
     color: #808080;
     font-family: times new roman;
     margin: 0 auto;
     max-width: 1000px;
-    background-color: #FFFFFF;
 }
