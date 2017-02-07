@@ -24,6 +24,11 @@ var articles = {
         <p>This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!
         </p>`,
      home: 'Home'
+},
+'example':{
+    title: 'adasjd',
+    content: '<h1>Hello</h1>',
+    home: 'HOME'
 }
 
 };
@@ -56,9 +61,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/example', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'example.html'));
-});
+
 
 app.get('/:articleName',function (req,res){
     var articleName = req.params.articleName;
