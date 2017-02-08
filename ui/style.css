@@ -30,3 +30,7 @@ h1{
     margin: 0 auto;
     max-width: 800px;
 }
+.image{
+    width:300px;
+    height:200px;
+}
