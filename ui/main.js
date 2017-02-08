@@ -1,9 +1,13 @@
 console.log('Loaded!');
 
+var counter= 0;
 
+var a = document.getElementById("button");
 
-var img = document.getElementById("madi");
-
-img.onclick = function(){
-    img.style.marginLeft = '100px';
+a.onclick = function(){
+  
+  counter = counter + 1;
+  var span = document.getElementById('count');
+  span.innerHTML = counter.toString();
 };
+
