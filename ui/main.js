@@ -1,8 +1,6 @@
 console.log('Loaded!');
 
-var element = document.getElementById("main");
 
-element.innerHTML = "New Value";
 
 var img = document.getElementById("madi");
 
