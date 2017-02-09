@@ -20,4 +20,17 @@ request.open('GET','http://venky-gh.imad.hasura-app.io/counter',true);
 request.send(null);
 };
 
+var but = document.getElementById('button');
 
+but.onclick = function(){
+  
+  var names = ['name1','name2','name3','name4'];
+  var list = '';
+  
+  for (var i=0; i<names.length; i++)
+  {
+      list += '<li>' + names[i] + '</li>';
+  }
+  var ul = document.getElementById('ul_list');
+  ul.innerHTML = list;
+};
