@@ -31,6 +31,6 @@ but.onclick = function(){
   {
       list += '<li>' + names[i] + '</li>';
   }
-  var ul = document.getElementById('ul_list');
+  var ul = document.getElementById('ullist');
   ul.innerHTML = list;
 };
