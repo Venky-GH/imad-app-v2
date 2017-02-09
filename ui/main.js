@@ -1,7 +1,8 @@
 console.log('Loaded!');
 
+var button = document.GetElementById('button');
 
-
+button.onlclick = function (){
 var request = new XMLHttpRequest();
 
 request.onreadystatechange = function(){
@@ -16,6 +17,8 @@ request.onreadystatechange = function(){
       }
   }
 };
-
 request.open('GET','http://venky-gh.imad.hasura-app.io/',true);
 request.send(null);
+};
+
+
