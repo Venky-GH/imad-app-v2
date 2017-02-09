@@ -10,9 +10,8 @@ request.onreadystatechange = function(){
   {
       if(request.status === 200)
       {
-          var counter =0;
-          counter = counter + 1;
-          var span = document.getElementById('count');
+          var counter = request.responseText;
+          var span = document.getElementById('d');
           span.innerHTML = counter.toString();
       }
   }
