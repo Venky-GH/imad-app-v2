@@ -1,6 +1,6 @@
 alert('Yeah!');
 
-var button = document.GetElementById('b');
+var button = document.getElementById('b');
 
 button.onclick = function (){
 var request = new XMLHttpRequest();
