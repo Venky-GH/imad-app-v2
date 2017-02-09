@@ -1,4 +1,4 @@
-alert('oh Yeah!');
+alert('Yeah!');
 
 var button = document.GetElementById('b');
 
