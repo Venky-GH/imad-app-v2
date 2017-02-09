@@ -2,7 +2,7 @@ alert('Loaded!');
 
 var button = document.GetElementById('button');
 
-button.onlclick = function (){
+button.onclick = function (){
 var request = new XMLHttpRequest();
 
 request.onreadystatechange = function(){
