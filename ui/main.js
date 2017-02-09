@@ -16,7 +16,7 @@ request.onreadystatechange = function(){
       }
   }
 };
-request.open('GET','http://venky-gh.imad.hasura-app.io/',true);
+request.open('GET','http://venky-gh.imad.hasura-app.io/counter',true);
 request.send(null);
 };
 
