@@ -1,4 +1,4 @@
-console.log('Loaded!');
+alert('Loaded!');
 
 var button = document.GetElementById('button');
 
