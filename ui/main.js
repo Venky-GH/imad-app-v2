@@ -1,4 +1,4 @@
-alert('Loaded!');
+alert('oh Yeah!');
 
 var button = document.GetElementById('button');
 
