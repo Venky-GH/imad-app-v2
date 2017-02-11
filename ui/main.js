@@ -29,7 +29,7 @@ request.onreadystatechange = function(){
 };
 var name_1 = document.getElementById('n');
 var nam = name_1.value;
-request.open('GET','http://venky-gh.imad.hasura-app.io/submit?names=' + nam ,true);
+request.open('GET','http://venky-gh.imad.hasura-app.io/submit?nam=' + nam ,true);
 request.send(null);
 
 };
