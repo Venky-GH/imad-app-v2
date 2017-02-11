@@ -27,7 +27,7 @@ request.onreadystatechange = function(){
       }
   }
 };
-request.open('GET','http://venky-gh.imad.hasura-app.io/submit?name=' + nam,true);
+request.open('GET','http://venky-gh.imad.hasura-app.io/submit/:nam' ,true);
 request.send(null);
 };
 
