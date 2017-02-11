@@ -60,8 +60,8 @@ return aap;
 var names=[];
 app.get('/submit', function(req, res){
    
-   var nam = req.query.nam;
-   names.push(nam);
+   var name = req.query.name;
+   names.push(name);
    res.send(JSON.stringify(names));
 });
 
