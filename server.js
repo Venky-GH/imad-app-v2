@@ -58,10 +58,10 @@ return aap;
 }
 
 var names=[];
-app.get('/submit/:name', function(req, res){
+app.get('/submit/:nam', function(req, res){
    
-   var name = req.params.name;
-   names.push(name);
+   var nam = req.params.nam;
+   names.push(nam);
    res.send(JSON.stringify(names));
 });
 
