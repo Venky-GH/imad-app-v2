@@ -2,7 +2,7 @@
 
 var button = document.getElementById('b');
 var name_1 = document.getElementById('n');
-var nam = name_1.value;
+
 var but = document.getElementById('button');
 
 
@@ -29,6 +29,7 @@ request.onreadystatechange = function(){
 };
 request.open('GET','http://venky-gh.imad.hasura-app.io/submit?names=' + nam ,true);
 request.send(null);
+var nam = name_1.value;
 };
 
 
