@@ -1,8 +1,12 @@
 
 
 var button = document.getElementById('b');
+var name_1 = document.getElementById('n');
+var nam = name_1.value;
+var but = document.getElementById('button');
 
-button.onclick = function (){
+
+but.onclick = function (){
 var request = new XMLHttpRequest();
 
 request.onreadystatechange = function(){
@@ -10,27 +14,22 @@ request.onreadystatechange = function(){
   {
       if(request.status === 200)
       {
-          var counter = request.responseText;
-          var span = document.getElementById('d');
-          span.innerHTML = counter.toString();
+            var names = request.responseText;
+            names = JSON.parse(names);
+          
+          for (var i=0; i<names.length; i++)
+          {
+              list += '<li>' + names[i] + '</li>';
+          }
+          var ul = document.getElementById('ullist');
+          ul.innerHTML = list;
       }
   }
 };
-request.open('GET','http://venky-gh.imad.hasura-app.io/counter',true);
+request.open('GET','http://venky-gh.imad.hasura-app.io/submit?name=' + nam,true);
 request.send(null);
 };
 
-var but = document.getElementById('button');
 
-but.onclick = function(){
-  
-  var names = ['name1','name2','name3','name4'];
-  var list = '';
-  
-  for (var i=0; i<names.length; i++)
-  {
-      list += '<li>' + names[i] + '</li>';
-  }
-  var ul = document.getElementById('ullist');
-  ul.innerHTML = list;
-};
+
+
