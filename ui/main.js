@@ -16,6 +16,7 @@ request.onreadystatechange = function(){
       {
             var names = request.responseText;
             names = JSON.parse(names);
+            var list = '';
           
           for (var i=0; i<names.length; i++)
           {
