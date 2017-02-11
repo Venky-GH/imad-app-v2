@@ -57,12 +57,12 @@ var aap = `<html>
 return aap;
 }
 
-var names=[];
+var names1=[];
 app.get('/submit', function(req, res){
    
    var name = req.query.name;
    names.push(name);
-   res.send(JSON.stringify(names));
+   res.send(JSON.stringify(names1));
 });
 
 var counter = 0;
