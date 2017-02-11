@@ -61,7 +61,7 @@ var names1=[];
 app.get('/submit', function(req, res){
    
    var name = req.query.name;
-   names.push(name);
+   names1.push(name);
    res.send(JSON.stringify(names1));
 });
 
