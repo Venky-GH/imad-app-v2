@@ -58,9 +58,9 @@ return aap;
 }
 
 var names=[];
-app.get('/submit/:nam', function(req, res){
+app.get('/submit', function(req, res){
    
-   var nam = req.params.nam;
+   var nam = req.query.nam;
    names.push(nam);
    res.send(JSON.stringify(names));
 });
