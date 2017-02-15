@@ -38,4 +38,5 @@ h1{
 
 .xyz{
     background-color:red;
+    max-width: 800px;
 }
