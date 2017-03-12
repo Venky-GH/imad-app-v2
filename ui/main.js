@@ -1,13 +1,14 @@
+/*
 alert('Loaded');
 
 var button = document.getElementById('b');
 
 
 var but = document.getElementById('button');
+*/
+var su = document.getElementById('sub');
 
-var sub = document.getElementById('sub');
-
-sub.onclick = function (){
+su.onclick = function (){
 var request = new XMLHttpRequest();
 
 request.onreadystatechange = function(){
@@ -15,7 +16,7 @@ request.onreadystatechange = function(){
   {
       if(request.status === 200)
       {
-          console.log('Successfully logged in!');
+          alert('Successfully logged in!');
       }
       else if(request.status === 403){
           alert('Invalid Username/Password!');
