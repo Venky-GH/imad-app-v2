@@ -1,4 +1,4 @@
-
+alert('Loaded');
 
 var button = document.getElementById('b');
 
