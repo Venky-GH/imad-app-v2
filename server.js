@@ -43,13 +43,13 @@ var articles = {
 
 };
 
-function hash(input, salt){
-    var r = crypto.pbkdf2Sync(input, salt, 100000, 512, 'sha512');
+function hash(input){
+    var r = crypto.pbkdf2Sync(input, 'salt', 10000, 512, 'sha512');
     return r.toString('hex');
 }
 
 app.get('/hash/:input', function(req,res){
-   var hashedString = hash(req.params.input,'Some-random-value-out-of-the-box!');
+   var hashedString = hash(req.params.input);
    res.send(hashedString);
 });
 
