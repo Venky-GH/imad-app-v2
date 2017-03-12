@@ -5,7 +5,7 @@ var button = document.getElementById('b');
 
 var but = document.getElementById('button');
 
-var sub = document.getElementById('Submit');
+var sub = document.getElementById('sub');
 
 sub.onclick = function (){
 var request = new XMLHttpRequest();
