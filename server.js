@@ -82,6 +82,30 @@ app.post('/create-user', function(req,res){
    });
 });
 
+app.get('/login', function(req,res){
+   var username = req.body.username;
+   var password = req.body.password;
+   var dbString = hash(password);
+   pool.query('SELECT * FROM "user" WHERE username = $1', [username], function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       } 
+       else if(result.rows === 0){
+           res.status(403).send('Invalid Username/Password!');
+       }
+       else{
+           var pas = result.rows[0].password;
+           if(pas === dbString){
+               res.send('User successfully logged in!');
+               alert('Login Successful Bitches!');
+           }
+           else{
+               res.send('Invalid Username/Password!');
+           }
+       }
+   });
+});
+
 function aa(data){
     var title = data.title;
     var home = data.home;
