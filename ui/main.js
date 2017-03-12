@@ -34,7 +34,7 @@ request.setRequestHeader('Content-type','application/json');
 request.send(JSON.stringify({username: username, password: password}));
 
 };
-
+/*
 but.onclick = function (){
 var request = new XMLHttpRequest();
 
@@ -63,7 +63,6 @@ request.send(null);
 
 };
 
-/*
 button.onclick = function(){
   
   var request = new XMLHttpRequest();
