@@ -97,7 +97,6 @@ app.post('/login', function(req,res){
            var pas = result.rows[0].password;
            if(pas === dbString){
                res.send('User successfully logged in!');
-               alert('Login Successful Bitches!');
            }
            else{
                res.status(403).send('Invalid Username/Password!');
