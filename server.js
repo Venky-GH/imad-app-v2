@@ -3,6 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var crypto = require('crypto');
 var Pool = require('pg').Pool;
+var bodyParser = require('body-parser');
 
 var config = {
   host: 'db.imad.hasura-app.io',
@@ -14,6 +15,7 @@ var config = {
 
 var app = express();
 app.use(morgan('combined'));
+app.use(bodyParser.json());
 
 var articles = {
 'article-one': {
@@ -64,6 +66,20 @@ app.get('/test-db',function(req,res){
            res.send(JSON.stringify(result.rows));
        }
     });
+});
+
+app.post('/create-user', function(req,res){
+   var username = req.body.username;
+   var password = req.body.password;
+   var dbString = hash(password);
+   pool.query('INSERT INTO "user" (username,password) VALUES ($1,$2)', [username,dbString], function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       } 
+       else{
+           res.send('User successfully created: ' + username);
+       }
+   });
 });
 
 function aa(data){
