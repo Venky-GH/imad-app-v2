@@ -122,6 +122,11 @@ app.get('/check-login', function(req,res){
    }
 });
 
+app.get('/logout',function(req,res){
+   delete req.session.auth;
+   res.send('Loggged out Successfully!');
+});
+
 function aa(data){
     var title = data.title;
     var home = data.home;
