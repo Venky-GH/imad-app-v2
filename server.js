@@ -45,7 +45,7 @@ var articles = {
 
 function hash(input, salt){
     var result = crypto.pbkdf2(input, salt, 100000, 512, 'sha512');
-    return(result.toString('hex'));
+    return result.toString('hex');
 }
 
 app.get('/hash/:input', function(req,res){
