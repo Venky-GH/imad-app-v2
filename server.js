@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
+var crypto = require('crypto');
 var Pool = require('pg').Pool;
 
 var config = {
@@ -42,6 +42,16 @@ var articles = {
 }
 
 };
+
+function hash(input, salt){
+    var result = crypto.pbkdf2(input, salt, 100000, 512, 'sha512');
+    return(result.toString('hex'));
+}
+
+app.get('/hash/:input', function(req,res){
+   var hashedString = hash(req.params.input,'Some-random-value-out-of-the-box!');
+   res.send(hashedString);
+});
 
 var pool = new Pool(config);
 
