@@ -4,6 +4,7 @@ var path = require('path');
 var crypto = require('crypto');
 var Pool = require('pg').Pool;
 var bodyParser = require('body-parser');
+var session = require('express-session');
 
 var config = {
   host: 'db.imad.hasura-app.io',
@@ -16,6 +17,10 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(session({
+    secret: 'RandomValue',
+    cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
+}));
 
 var articles = {
 'article-one': {
@@ -96,6 +101,9 @@ app.post('/login', function(req,res){
        else{
            var pas = result.rows[0].password;
            if(pas === dbString){
+               
+               req.session.auth = {userId: result.rows[0].id};
+               
                res.send('User successfully logged in!');
            }
            else{
@@ -103,6 +111,15 @@ app.post('/login', function(req,res){
            }
        }
    });
+});
+
+app.get('/check-login', function(req,res){
+   if(req.session && req.session.auth && req.session.auth.userId){
+       res.send('You are logged in: '+req.session.auth.userId.toString());
+   }
+   else{
+       res.send('You are not logged in!');
+   }
 });
 
 function aa(data){
