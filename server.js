@@ -44,7 +44,7 @@ var articles = {
 };
 
 function hash(input, salt){
-    var result = crypto.pbkdf2(input, salt, 100000, 512, 'sha512');
+    var result = crypto.pbkdf2Sync(input, salt, 100000, 512, 'sha512');
     return result.toString('hex');
 }
 
