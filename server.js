@@ -113,6 +113,10 @@ app.post('/login', function(req,res){
    });
 });
 
+app.get('/registration_and_login', function(req,res){
+   res.sendFile(path.join(__dirname, 'ui', 'reg.html')); 
+});
+
 app.get('/check-login', function(req,res){
    if(req.session && req.session.auth && req.session.auth.userId){
        res.send('You are logged in: '+req.session.auth.userId.toString());
@@ -189,9 +193,7 @@ app.get('/:articleName',function (req,res){
     
 });
 
-app.get('/registration_and_login', function(req,res){
-   res.sendFile(path.join(__dirname, 'ui', 'reg.html')); 
-});
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
