@@ -189,6 +189,9 @@ app.get('/:articleName',function (req,res){
     
 });
 
+app.get('/registration_and_login', function(req,res){
+   res.sendFile(path.join(__dirname, 'ui', 'reg.html')); 
+});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
