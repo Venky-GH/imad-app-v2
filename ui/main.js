@@ -18,6 +18,7 @@ request.onreadystatechange = function(){
       {
           alert('Successfully logged in!');
           console.log('Login Successful!');
+          location.href = "index.html";
       }
       else if(request.status === 403){
           alert('Invalid Username/Password!');
