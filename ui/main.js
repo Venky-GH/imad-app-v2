@@ -17,6 +17,7 @@ request.onreadystatechange = function(){
       if(request.status === 200)
       {
           alert('Successfully logged in!');
+          console.log('Login Successful!');
       }
       else if(request.status === 403){
           alert('Invalid Username/Password!');
