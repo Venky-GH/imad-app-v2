@@ -104,7 +104,7 @@ app.post('/login', function(req,res){
                
                req.session.auth = {userId: result.rows[0].id};
                
-               res.send('User successfully logged in!');
+               res.status(200).send('User successfully logged in!');
            }
            else{
                res.status(403).send('Invalid Username/Password!');
