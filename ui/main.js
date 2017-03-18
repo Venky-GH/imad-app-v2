@@ -47,7 +47,6 @@ request.onreadystatechange = function(){
       if(request.status === 200)
       {
           alert('Successfully Registered!');
-          window.location.href = "http://venky-gh.imad.hasura-app.io";
       }
       else if(request.status === 403){
           alert('Username already used!');
@@ -65,6 +64,11 @@ request.open('POST','http://venky-gh.imad.hasura-app.io/create-user' ,true);
 request.setRequestHeader('Content-type','application/json');    
 request.send(JSON.stringify({username: username, password: password}));
 
+};
+
+var red = document.getElementById('asdf');
+red.onclick = function(){
+  window.location.href = "http://venky-gh.imad.hasura-app.io";  
 };
 
 /*
