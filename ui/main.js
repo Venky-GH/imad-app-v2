@@ -46,6 +46,7 @@ request.onreadystatechange = function(){
       if(request.status === 200)
       {
           alert('Successfully Registered!');
+          location.href = "index.html";
       }
       else if(request.status === 403){
           alert('Username already used!');
