@@ -66,6 +66,10 @@ request.send(JSON.stringify({username: username, password: password}));
 
 };
 
+var redi = document.getElementById('asdf');
+redi.onclick = function(){
+  window.open("http://venky-gh.imad.hasura-app.io/logout");  
+};
 
 /*
 but.onclick = function (){
