@@ -47,7 +47,7 @@ request.onreadystatechange = function(){
       if(request.status === 200)
       {
           alert('Successfully Registered!');
-          location.href = "http://venky-gh.imad.hasura-app.io";
+          window.location.href = "http://venky-gh.imad.hasura-app.io";
       }
       else if(request.status === 403){
           alert('Username already used!');
