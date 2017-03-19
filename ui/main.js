@@ -18,7 +18,7 @@ request.onreadystatechange = function(){
       {
           alert('Successfully logged in!');
           console.log('Login Successful!');
-          location.href = "index.html";
+          location.href = "http://venky-gh.imad.hasura-app.io";
       }
       else if(request.status === 403){
           alert('Invalid Username/Password!');
