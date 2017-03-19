@@ -68,7 +68,7 @@ request.send(JSON.stringify({username: username, password: password}));
 
 var redi = document.getElementById('asdf');
 redi.onclick = function(){
-  document.location.href = 'http://venky-gh.imad.hasura-app.io/logout';  
+  window.open('http://venky-gh.imad.hasura-app.io/logout');  
 };
 
 /*
