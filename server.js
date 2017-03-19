@@ -114,6 +114,10 @@ app.post('/login', function(req,res){
    });
 });
 
+app.get('/user', function(req,res){
+   res.sendFile(path.join(__dirname,'ui','user.html')); 
+});
+
 app.get('/registration_and_login', function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'reg.html')); 
 });
