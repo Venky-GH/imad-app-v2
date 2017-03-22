@@ -105,8 +105,7 @@ button.onclick = function(){
   
   var request = new XMLHttpRequest();
   
-  request.open('GET', 'http://venky-gh.imad.hasura-app.io/counter', true);
-  request.send(null);
+
   
   request.onreadystatechange = function(){
     
@@ -120,6 +119,8 @@ button.onclick = function(){
         }
     }
   };
+    request.open('GET', 'http://venky-gh.imad.hasura-app.io/counter', true);
+  request.send(null);
 };
 
 
