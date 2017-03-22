@@ -1,10 +1,10 @@
-/*
+
 
 var button = document.getElementById('b');
 
 
 var but = document.getElementById('button');
-*/
+
 var su = document.getElementById('sub');
 var r = document.getElementById('re');
 
@@ -72,7 +72,7 @@ redi.onclick = function(){
   window.open('http://venky-gh.imad.hasura-app.io/logout');  
 };
 
-/*
+
 but.onclick = function (){
 var request = new XMLHttpRequest();
 
@@ -121,6 +121,6 @@ button.onclick = function(){
     }
   };
 };
-*/
+
 
 
