@@ -104,21 +104,23 @@ request.send(null);
 button.onclick = function(){
   
   var request = new XMLHttpRequest();
-  
 
-  
-  request.onreadystatechange = function(){
-    
-    if(request.readyState === XMLHttpRequest.DONE)
-    {
-        if(request.status === 200)
-        {
-            var counter = request.responseText;
-            var sm = document.getElementById('d');
-            sm.innerHTML = counter.toString();
-        }
-    }
-  };
+request.onreadystatechange = function(){
+  if(request.readyState === XMLHttpRequest.DONE)
+  {
+      if(request.status === 200)
+      {
+          var counter = request.responseText;
+          document.getElementById("d").innerHTML = counter.toString();
+      }
+      else if(request.status === 403){
+          alert('Invalid Username/Password!');
+      }
+      else if(request.status === 500){
+          alert('Something went wrong on the server!');
+      }
+  }
+};
     request.open('GET', 'http://venky-gh.imad.hasura-app.io/counter', true);
   request.send(null);
 };
