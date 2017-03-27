@@ -115,7 +115,7 @@ button.onclick = function(){
         {
             var counter = request.responseText;
             var sm = document.getElementById('d');
-            sm.innerHTML = counter;
+            sm.innerHTML = counter.toString();
         }
     }
   };
