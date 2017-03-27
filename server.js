@@ -42,7 +42,7 @@ var articles = {
         </p>`,
      home: 'Home'
 },
-'example':{
+'article-two':{
     title: 'adasjd',
     content: '<h1>Hello</h1>',
     home: 'HOME'
