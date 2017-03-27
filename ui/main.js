@@ -8,6 +8,13 @@ var but = document.getElementById('button');
 var su = document.getElementById('sub');
 var r = document.getElementById('re');
 
+var counter = 0;
+button.onclick = function(){
+    counter = counter + 1;
+    document.getElementById("naidu").innerHTML = counter.toString();
+};
+
+
 su.onclick = function (){
 var request = new XMLHttpRequest();
 
@@ -99,11 +106,6 @@ var name = name_1.value;
 request.open('GET','http://venky-gh.imad.hasura-app.io/submit?name=' + name ,true);
 request.send(null);
 
-};
-var counter = 0;
-button.onclick = function(){
-    counter = counter + 1;
-    document.getElementById("naidu").innerHTML = counter.toString();
 };
 
 
