@@ -5,33 +5,13 @@ body {
     background-size: cover;
 }
 
-.container{
-    max-width:900px;
-}
-
 .center {
     text-align: center;
 }
 
-.text-big {
-    font-size: 300%;
-}
-
-.bold {
-    font-weight: bolder;
-    color: red;
-}
-
-
-.img-medium {
-    height: 200px;
-}
-h1{
-    text-decoration: underline;
-}
 .abc{
-    padding-top: 30px;
-    color: white;
+    padding-top: 15px;
+    color: #FF5733;
     font-size:16px;
     font-family: times new roman;
     margin: 0 auto;
@@ -41,14 +21,9 @@ h1{
     width:350px;
     height:260px;
     text-align: center;
-    border-radius: 50px;
+    border-radius: 40px;
 }
 
-.xyz{
-    background-color:red;
-    max-width: 800px;
-    margin: 0 auto;
-}
 #form{
     margin-top: 100px;
     max-width: 450px;
@@ -62,5 +37,5 @@ h1{
     text-align: center;
 }
 .href{
-    color: lightblue;
+    color: #0EE2C4;
 }
