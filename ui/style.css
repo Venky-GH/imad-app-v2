@@ -1,8 +1,8 @@
 body {
     font-family: sans-serif;
     margin-top: 75px;
-    background-color: #581845;
-    
+    background-image: url(batman-logo-wallpaper-for-desktop-1080p-123.jpg);
+    background-size: contain;
 }
 
 .container{
