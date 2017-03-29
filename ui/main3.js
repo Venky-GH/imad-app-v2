@@ -14,6 +14,6 @@ t.onclick = function(){
   };
   var g = document.getElementById('hinput');
   var y = g.value;
-  request.open('GET','http://venky-gh.imad.hasura-app.io/hash/:' + y.true);
+  request.open('GET','http://venky-gh.imad.hasura-app.io/hash/:' + y,true);
   request.send(null);
 };
