@@ -156,10 +156,10 @@ var aap = `<html>
     </head>
     <body>
         <div>
-            <h1><a class="href" href="/">${home}</a></h1>
-            <hr/>
+            <h1 class="heading"><a class="href" href="/">${home}</a></h1>
         </div>
         <div class="abc">
+        </hr>
         ${content}
         </div>
     </body>
