@@ -50,6 +50,10 @@ var articles = {
 
 };
 
+app.get('/hashed', function(req,res){
+   res.sendFile(path.join(__dirname, 'ui', 'hashed.html')); 
+});
+
 app.get('/form', function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'form.html')); 
 });
