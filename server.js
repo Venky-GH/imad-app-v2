@@ -155,10 +155,11 @@ var aap = `<html>
     <link href="/ui/style.css" rel="stylesheet" />
     </head>
     <body>
-      <div>
-        <div class="abc">
+      <div class="abc">
+        <div>
             <h1 class="heading"><a class="href" href="/">${home}</a></h1>
         </div>
+        </hr>
         <div>
         ${content}
         </div>
