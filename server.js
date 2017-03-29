@@ -159,7 +159,6 @@ var aap = `<html>
             <h1 class="heading"><a class="href" href="/">${home}</a></h1>
         </div>
         <div class="abc">
-        </hr>
         ${content}
         </div>
     </body>
