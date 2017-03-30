@@ -3,6 +3,7 @@ body {
     margin-top: 75px;
     background-image: url(space.jpg);
     background-size: cover;
+    opacity: 0.8;
 }
 
 .center {
