@@ -1,47 +1,24 @@
 <!doctype html>
 <html>
     <head>
+        <link href="/ui/style.css" rel="stylesheet" />
         <meta name="viewport" content="width=device-width , initial-scale=1" /> 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <style>
-            body{
-                background-image: url('/ui/space.jpg');
-                background-size: cover;
-            }
-            .form{
-                max-width: 800px;
-                margin: 0 auto;
-            }
-            .heading{
-                text-align: center;
-                color: white;
-                font-weight: italic;
-                margin-top: 50px;
-            }
-        </style>
     </head>
     <body>
         <div class="heading">
             <h1>Register/Login</h1>
         </div>
-        <div class="form">
-        <form class="form-horizontal">
-        <div class="form-group">
-        <input type="text" class="form-control" id="username" placeholder="Username" />
-        </div>
-        <div class="form-group">
-        <input type="password" class="form-control" id="password" placeholder="Password" />
-        </div>
-        <div class="form-group">
-        <button class="form-control" id="sub">Login</button>
-        </div>
-        <div class="form-group">
-        <button class="form-control" id="re">Register</button>
-        </div>
-        </form>
+        <div class="abc center">
+        <input type="text" id="username" placeholder="Username" />
+        <br>
+        <br>
+        <input type="password" id="password" placeholder="Password" />
+        <br>
+        <br>
+        <button id="sub">Login</button>
+        <br>
+        <br>
+        <button id="re">Register</button>
         </div>
         <script type="text/javascript" src="/ui/main1.js">
         </script>
