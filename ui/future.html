@@ -5,76 +5,92 @@
 </head>
 <body>
 <p>
-; this sample checks if string is a palindrome or not.
-; palindrome is a text that can be read backwards
-; and give the same meaning as if it was read forward.
-; for example: "abba" is polindrome.
-; note: this program is case sensitive, "abba" is not "abba".
 
 name "pali"
-
+<br>
 org 100h
-
+<br>
 jmp start
-
-m1:
-s db 'able was ere ere saw elba'
-s_size = $ - m1
+<br>
+m1:<br>
+s db 'able was ere ere saw elba'<br>
+s_size = $ - m1<br>
   db 0Dh,0Ah,'$'
-
+<br>
 start:
-
-; first let's print it:
+<br>
 mov ah, 9
+<br>
 mov dx, offset s
+<br>
 int 21h
-
+<br>
 
 lea di, s
+<br>
 mov si, di
+<br>
 add si, s_size
+<br>
 dec si  ; point to last char!
-
+<br>
 mov cx, s_size
+<br>
 cmp cx, 1
-je is_palindrome  ; single char is always palindrome!
-
-shr cx, 1     ; divide by 2!
-
+<br>
+je is_palindrome  
+<br>
+shr cx, 1    
+<br>
 next_char:
+<br>
     mov al, [di]
+    <br>
     mov bl, [si]
+    <br>
     cmp al, bl
+    <br>
     jne not_palindrome
+    <br>
     inc di
+    <br>
     dec si
+    <br>
 loop next_char
-
+<br>
 
 is_palindrome:  
-   ;  the string is "palindrome!"
+   <br>
    mov ah, 9
+   <br>
    mov dx, offset msg1
+   <br>
    int 21h
+   <br>
 jmp stop
-
+<br>
 not_palindrome:
-   ;  the string is "not palindrome!"
+   <br>
    mov ah, 9
+   <br>
    mov dx, offset msg2
+   <br>
    int 21h
+<br>
 stop:
 
 
-; wait for any key press:
+<br>
 mov ah, 0
+<br>
 int 16h
 
-
+<br>
 ret
-
+<br>
 
 msg1 db "  this is palindrome!$"
+<br>
 msg2 db "  this is not a palindrome!$"
 </p>
 </body>
