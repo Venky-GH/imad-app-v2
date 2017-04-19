@@ -208,7 +208,9 @@ app.get('/:articleName',function (req,res){
     
 });
 
-
+app.get("/future",function(req,res){
+   res.sendFile(path.join(__dirname,'ui','future.html')); 
+});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
