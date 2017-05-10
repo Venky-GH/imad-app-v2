@@ -1,2 +1,111 @@
+<!DOCTYPE html>
 <html>
 <head>
+</head>
+<body>
+    DATA SEGMENT
+    <br>
+HOUR DB ?
+<br>
+MIN DB ?
+<br>
+DATA ENDS
+<br>
+CODE SEGMENT
+<br>
+ASSUME CS:CODE, DS:DATA
+<br>
+DISCHAR MACRO CHAR
+<br>
+PUSH AX
+<br>
+PUSH DX
+<br>
+MOV DL,CHAR
+<br>
+MOV AH,02
+<br>
+INT 21H
+<br>
+POP DX
+<br>
+POP AX
+<br>
+ENDM
+<br>
+START: MOV AX,DATA
+<br>
+MOV DS,AX
+<br>
+CALL TIME
+<br>
+MOV AH,4CH
+<br>
+INT 21H
+<br>
+TIME PROC NEAR
+<br>
+MOV AH,2CH 
+<br>
+INT 21H
+<br>
+MOV HOUR,CH
+<br>
+MOV MIN,CL
+<br>
+CMP CH,12
+<br>
+JB DOWN
+<br>
+SUB CH,12
+<br>
+DOWN: MOV AL,CH
+<br>
+MOV AH,00H
+<br>
+AAM
+<br>
+MOV AX,3030H
+<br>
+DISCHAR AH
+<br>
+DISCHAR AL
+<br>
+DISCHAR ':'
+<br>
+MOV AL,CL
+<br>
+MOV AH,00H
+<br>
+AAM
+<br>
+ADD AX,3030H
+<br>
+DISCHAR AH
+<br>
+DISCHAR AL
+<br>
+DISCHAR ' '
+<br>
+CMP HOUR,12
+<br>
+JB AM
+<br>
+DISCHAR 'P'
+<br>
+JMP DOWN1
+<br>
+AM: DISCHAR 'A'
+<br>
+DOWN1: DISCHAR 'M'
+<br>
+RET
+<br>
+TIME ENDP
+<br>
+CODE ENDS
+<br>
+END START
+
+</body>
+</html>
