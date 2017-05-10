@@ -1,1 +1,60 @@
 <!DOCTYPE html>
+<html>
+<head>
+<title>Cisco</title>
+</head>
+<body>
+DATA SEGMENT
+<br>
+INKEY DB ?
+<br>
+BUF DB 20 DUP(0)
+<br>
+MES DB 10,13, ' SRM UNIVERSITY $'
+<br>
+DATA ENDS
+<br>
+CODE SEGMENT
+<br>
+ASSUME CS:CODE , DS:DATA
+<br>
+START: MOV AX,DATA
+<br>
+MOV DS,AX
+<br>
+MOV AH,01H
+<br>
+INT 21H
+<br>
+MOV INKEY,AL 
+<br>
+MOV BUF,10
+<br>
+MOV AH,0AH
+<br>
+LEA DX,BUF
+<br>
+INT 21H
+<br>
+MOV AH,06H
+<br>
+MOV DL,'A'
+<br>
+INT 21H
+<br>
+MOV AH,09H
+<br>
+LEA DX,MES
+<br>
+INT 21H
+<br>
+MOV AH,4CH
+<br>
+INT 21H
+<br>
+CODE ENDS
+<br>
+END START
+
+</body>
+</html>
