@@ -196,6 +196,10 @@ app.get("/flash",function(req,res){
    res.sendFile(path.join(__dirname,'ui','flash.html')); 
 });
 
+app.get("/cisco",function(req,res){
+   res.sendFile(path.join(__dirname,'ui','cisco.html')); 
+});
+
 app.get('/:articleName',function (req,res){
     pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function(err,result){
        if(err){
